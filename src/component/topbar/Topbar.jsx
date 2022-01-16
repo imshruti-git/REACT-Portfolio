@@ -18,6 +18,10 @@ export default function Topbar({menuOpen, setMenuOpen}) {
                         <Mail className="icon"/>
                         <span>vaidya.shruti1108@gmail.com</span>
                     </div>
+                    <div className="itemContainer">
+                        <Mail className="icon"/>
+                        <a href="https://github.com/imshruti-git?tab=repositories" rel="noreferrer" target='_blank'>www.github.com/imshruti-git</a>
+                    </div>
                     
                 </div>
                 

@@ -21,9 +21,6 @@ function App() {
           <Education />
           <Contact />
         </div>
-        
-
-      
     </div>
   );
 }
