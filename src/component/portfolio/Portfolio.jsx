@@ -4,8 +4,8 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import {useState, useEffect} from "react";
 import {
     wordpressPortfolio,
-    laravelPortfolio,
-    frontendPortfolio,
+    reactJs,
+    reactNative,
   } from "../../data";
 
 export default function Portfolio() {
@@ -20,14 +20,14 @@ export default function Portfolio() {
         
         },
         {
-            id: "Laravel",
-            title: "Laravel",
+            id: "React_Js",
+            title: "React Js",
         
         },
 
         {
-            id: "Frontend",
-            title: "Frontend",
+            id: "React_Native",
+            title: "React Native",
         
         },
     ];
@@ -39,11 +39,11 @@ export default function Portfolio() {
           case "Wordpress":
             setData(wordpressPortfolio);
             break;
-          case "Laravel":
-            setData(laravelPortfolio);
+          case "React_Js":
+            setData(reactJs);
             break;
-          case "Frontend":
-            setData(frontendPortfolio);
+          case "React_Native":
+            setData(reactNative);
             break;
         default:
             setData(wordpressPortfolio);
