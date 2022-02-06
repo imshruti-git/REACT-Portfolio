@@ -10,6 +10,11 @@
     h1{
         font-size: 50px;
         color:red;
+
+        @include mobile{
+            font-size: 20px;
+            overflow: hidden;
+          }
     }
 
     ul{
@@ -18,18 +23,26 @@
         padding: 0;
         display: flex;
 
-       
+        @include mobile{
+            margin: 10px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+          }
     }
 
 
     .container{
-        width: 90%;
+        width: 70%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         overflow: hidden;
 
+        @include mobile{
+            width: 100%;
+        }
 
         .item{
             width: 250px;
@@ -43,7 +56,13 @@
             justify-content: center;
             position: relative;
             transition: all 0.5s ease;
+            overflow: hidden;
             
+            @include mobile{
+                width: 130px;
+                height: 100px;
+                margin-top: 30px;
+            }
         
             img{
                 width: 100%;

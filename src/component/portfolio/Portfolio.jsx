@@ -1,6 +1,7 @@
 import React from 'react'
 import "./portfolio.scss"
 import PortfolioList from "../portfolioList/PortfolioList";
+import { Button } from '@material-ui/core';
 import {useState, useEffect} from "react";
 import {
     wordpressPortfolio,
@@ -10,43 +11,44 @@ import {
 
 export default function Portfolio() {
 
-  const [selected, setSelected]= useState("Wordpress");
+  const [selected, setSelected]= useState("React_Js");
   const [data, setData] = useState([]);
 
     const list = [
+      {
+        id: "React_Js",
+        title: "React Js",
+    
+    },
+
+    {
+        id: "React_Native",
+        title: "React Native",
+    
+    },
         {
             id: "Wordpress",
             title: "Wordpress",
         
         },
-        {
-            id: "React_Js",
-            title: "React Js",
         
-        },
-
-        {
-            id: "React_Native",
-            title: "React Native",
-        
-        },
     ];
 
 
 
     useEffect(() => {
         switch (selected) {
-          case "Wordpress":
-            setData(wordpressPortfolio);
-            break;
           case "React_Js":
             setData(reactJs);
             break;
-          case "React_Native":
-            setData(reactNative);
+            case "React_Native":
+              setData(reactNative);
+              break;
+          case "Wordpress":
+            setData(wordpressPortfolio);
             break;
         default:
-            setData(wordpressPortfolio);
+            setData(reactJs);
         }
       }, [selected]);
 
@@ -67,10 +69,12 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {data.map((d)=>
+                  <a href={d.link} target='_blank'>
                      <div className="item">
-                     <img src={d.img}/>
-                     <h3>{d.title}</h3>
+                        <img src={d.img} alt={d.title}/>
+                        <h3>{d.title}</h3>
                  </div>
+                 </a>
                   )}
                
                 

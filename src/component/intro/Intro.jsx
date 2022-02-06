@@ -3,12 +3,13 @@ import "./intro.scss"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 
+
 export default function Intro() {
     return (
         <div className="intro" id="intro">
             <div className="left">
                 <div className="imagecontainer">
-                    <img src="image/IMG_5585.jpg" alt="shruti vaidya" />
+                    <img src="image/web1.jpg" alt="shruti vaidya" />
                 </div>
             </div>
             <div className="right">
