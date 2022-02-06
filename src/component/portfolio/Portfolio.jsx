@@ -1,7 +1,6 @@
 import React from 'react'
 import "./portfolio.scss"
 import PortfolioList from "../portfolioList/PortfolioList";
-import { Button } from '@material-ui/core';
 import {useState, useEffect} from "react";
 import {
     wordpressPortfolio,
@@ -69,7 +68,7 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {data.map((d)=>
-                  <a href={d.link} target='_blank'>
+                  <a href={d.link} target='_blank' rel='noreferrer'>
                      <div className="item">
                         <img src={d.img} alt={d.title}/>
                         <h3>{d.title}</h3>
